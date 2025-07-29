@@ -20,10 +20,10 @@
   /* display: block; */
 }
 .banner-left {
-  flex: 1;
+  /* flex: 1; */
 }
 .title {
-  flex: 1;
+  /* flex: 1; */
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 4.3rem;
@@ -69,6 +69,7 @@
 .left-side .btn:nth-child(2) {
   background-color: rgb(126, 129, 129);
   font-weight: bold;
+  color: black;
 }
 .right-side {
   /* background-color: rgb(58, 49, 49); */
@@ -139,4 +140,82 @@ footer {
 }
 .list-item ul li {
   list-style: none;
+}
+
+@media (max-width: 992px) {
+  .banner-right img {
+    width: 100%;
+    display: block;
+    flex: 1;
+  }
+  .banner-right {
+    flex: 1;
+  }
+  .banner-left {
+    flex: 1;
+  }
+  .title {
+    font-size: 3rem;
+    margin: 0 0;
+    line-height: 55px;
+  }
+  .sub-title {
+    font-size: 0.8rem;
+    margin: 10;
+  }
+  .main-section {
+    flex-direction: column;
+  }
+  .left-side {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+  }
+  .left-side > * {
+    flex: 1;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 10px; */
+  }
+  .list-item ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .div-footer {
+    padding: 100px;
+  }
+}
+@media (max-width: 576px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .banner-left {
+    padding: 20px;
+  }
+  .banner-right img {
+    width: 60%;
+    margin: auto;
+  }
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: transparent;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* gap: 10px; */
+  }
+  .list-item ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
